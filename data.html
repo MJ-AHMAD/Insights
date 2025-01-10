@@ -18,10 +18,16 @@
     </div>
     <script>
         window.onload = function() {
-            const formData = JSON.parse(localStorage.getItem('formData'));
-            document.getElementById('data').innerText = JSON.stringify(formData, null, 2);
-            // Optionally clear the data from localStorage if needed
-            // localStorage.removeItem('formData');
+            const formDataList = JSON.parse(localStorage.getItem('formDataList')) || [];
+            let formattedData = '';
+            formDataList.forEach((data, index) => {
+                formattedData += `Entry ${index + 1}:\n`;
+                formattedData += `Name: ${data.name}\n`;
+                formattedData += `Email: ${data.email}\n`;
+                formattedData += `Number: ${data.number}\n`;
+                formattedData += `Details: ${data.details}\n\n`;
+            });
+            document.getElementById('data').innerText = formattedData;
         };
     </script>
 </body>
