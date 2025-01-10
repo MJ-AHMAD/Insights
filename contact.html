@@ -47,8 +47,12 @@
                 number: document.getElementById('number').value,
                 details: document.getElementById('details').value
             };
-            // Save data to localStorage for admin
-            localStorage.setItem('formData', JSON.stringify(formData));
+            // Get existing data from localStorage
+            const existingData = JSON.parse(localStorage.getItem('formDataList')) || [];
+            // Add new form data to existing data
+            existingData.push(formData);
+            // Save updated data back to localStorage
+            localStorage.setItem('formDataList', JSON.stringify(existingData));
             // Redirect to success page
             window.location.href = 'success.html';
         }
