@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Submitted Data</h2>
+        <pre id="data"></pre>
+        <a href="contact.html">Go back to the contact form</a>
+    </div>
+    <script>
+        window.onload = function() {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+            document.getElementById('data').innerText = JSON.stringify(formData, null, 2);
+            // Optionally clear the data from localStorage if needed
+            // localStorage.removeItem('formData');
+        };
+    </script>
+</body>
+</html>
