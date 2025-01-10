@@ -15,8 +15,7 @@ Protecting Freedom with the Power of Technology, Crest-Wave's Commitment! we nee
 
 ### About:
 ```
-Crest-Wave
-Through Crest-Wave, we aim to pay deep respect to the heroes who sacrificed their lives for the country's independence.Our goal is to make advanced technology accessible and simplify the use of all powerful Microsoft tools for students.
+We aim to pay deep respect to the heroes who sacrificed their lives for the country's independence.Our goal is to make advanced technology accessible and simplify the use of all powerful Microsoft tools for students.
 ```
 ### Mission:
 ```
