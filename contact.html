@@ -47,9 +47,9 @@
                 number: document.getElementById('number').value,
                 details: document.getElementById('details').value
             };
-            // Get existing data from localStorage
-            const existingData = JSON.parse(localStorage.getItem('formDataList')) || [];
-            // Add new form data to existing data
+            // Retrieve existing data from localStorage
+            let existingData = JSON.parse(localStorage.getItem('formDataList')) || [];
+            // Append new form data
             existingData.push(formData);
             // Save updated data back to localStorage
             localStorage.setItem('formDataList', JSON.stringify(existingData));
