@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - MJ AHMAD</title>
+    <title>Contact Form</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h1, h2 { color: #333; }
-        p { line-height: 1.6; color: #666; }
-        header, footer { text-align: center; padding: 20px 0; background: #333; color: #fff; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; box-sizing: border-box; }
+        .form-group textarea { resize: vertical; }
+        .btn { background-color: #5cb85c; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .btn:hover { background-color: #4cae4c; }
+        header, footer { text-align: center; padding: 10px 0; background: #333; color: #fff; }
         footer a { color: #fff; margin: 0 10px; text-decoration: none; }
         footer p { margin: 5px 0; }
     </style>
@@ -37,12 +41,15 @@
         <p>
             <a href="https://www.facebook.com/mj.ahmad.768732" target="_blank">Facebook</a>
             <a href="#" target="_blank">Twitter</a>
-            <a href="https://linkedin.com/in/jafor-ahmad/" target="_blank">LinkedIn</a>
+            <a href="https://linkedin.com/in/jafor-ahmad/" target="_blank">Linkedin</a>
             <a href="https://github.com/MJ-AHMAD/" target="_blank">GitHub</a>
         </p>
         <p>Email: mjahmad2024@outlook.com</p>
         <p>Mobile: +880 132 2371643</p>
-        <p>&copy; 2025 MJ AHMAD. All rights reserved.</p>
+        <p>.</p>
+    </footer>
+    <footer>
+        <p>&copy; 2024 MJ AHMAD. All rights reserved.</p>
         <p>
             <a href="https://mjahmad.com/" target="_blank">Home</a>
             <a href="https://mjahmad.com/terms" target="_blank">Terms</a>
@@ -50,5 +57,25 @@
             <a href="https://mjahmad.com/support" target="_blank">Support</a>
         </p>
     </footer>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                number: document.getElementById('number').value,
+                details: document.getElementById('details').value
+            };
+            // Retrieve existing data from localStorage
+            let existingData = JSON.parse(localStorage.getItem('formDataList')) || [];
+            // Append new form data
+            existingData.push(formData);
+            // Save updated data back to localStorage
+            localStorage.setItem('formDataList', JSON.stringify(existingData));
+            // Redirect to success page
+            window.location.href = 'success.html';
+        }
+    </script>
 </body>
 </html>
+
