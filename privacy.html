@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; box-sizing: border-box; }
+        .form-group textarea { resize: vertical; }
+        .btn { background-color: #5cb85c; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .btn:hover { background-color: #4cae4c; }
+        header, footer { text-align: center; padding: 10px 0; background: #333; color: #fff; }
+        footer a { color: #fff; margin: 0 10px; text-decoration: none; }
+        footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MJ AHMAD</h1>
+    </header>
+    <div class="container">
+        <h2>Privacy Policy</h2>
+        <p>Welcome to MJ AHMAD's website. This privacy policy outlines how we collect, use, and protect your personal information when you visit our website.</p>
+        
+        <h3>1. Information We Collect</h3>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li>Personal identification information (Name, email address, phone number, etc.)</li>
+            <li>Usage data (IP address, browser type, pages visited, etc.)</li>
+            <li>Cookies and tracking technologies</li>
+        </ul>
+        
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li>To provide and maintain our website</li>
+            <li>To improve our website and services</li>
+            <li>To communicate with you, including responding to your inquiries</li>
+            <li>To send you promotional materials and updates</li>
+            <li>To analyze website usage and trends</li>
+        </ul>
+        
+        <h3>3. How We Protect Your Information</h3>
+        <p>We implement a variety of security measures to maintain the safety of your personal information. These measures include encryption, access controls, and secure data storage.</p>
+        
+        <h3>4. Sharing Your Information</h3>
+        <p>We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except as required by law or to protect our rights.</p>
+        
+        <h3>5. Your Rights</h3>
+        <p>You have the right to access, update, or delete your personal information. You can also opt-out of receiving promotional communications from us at any time.</p>
+        
+        <h3>6. Changes to This Privacy Policy</h3>
+        <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on our website.</p>
+        
+        <h3>7. Contact Us</h3>
+        <p>If you have any questions about this privacy policy, please contact us at:</p>
+        <p>Email: mjahmad2024@outlook.com</p>
+        <p>Mobile: +880 132 2371643</p>
+    </div>
+    <footer>
+        <p>Address: Purana Paltan, Dhaka-1000, Bangladesh</p>
+        <p>
+            <a href="https://www.facebook.com/mj.ahmad.768732" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="https://linkedin.com/in/jafor-ahmad/" target="_blank">Linkedin</a>
+            <a href="https://github.com/MJ-AHMAD/" target="_blank">GitHub</a>
+        </p>
+        <p>Email: mjahmad2024@outlook.com</p>
+        <p>Mobile: +880 132 2371643</p>
+        <p>.</p>
+    </footer>
+    <footer>
+        <p>&copy; 2024 MJ AHMAD. All rights reserved.</p>
+        <p>
+            <a href="https://mjahmad.com/" target="_blank">Home</a>
+            <a href="https://mjahmad.com/terms" target="_blank">Terms</a>
+            <a href="https://mjahmad.com/privacy" target="_blank">Privacy</a>
+            <a href="https://mjahmad.com/support" target="_blank">Support</a>
+        </p>
+    </footer>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                number: document.getElementById('number').value,
+                details: document.getElementById('details').value
+            };
+            // Retrieve existing data from localStorage
+            let existingData = JSON.parse(localStorage.getItem('formDataList')) || [];
+            // Append new form data
+            existingData.push(formData);
+            // Save updated data back to localStorage
+            localStorage.setItem('formDataList', JSON.stringify(existingData));
+            // Redirect to success page
+            window.location.href = 'success.html';
+        }
+    </script>
+</body>
+</html>
+
