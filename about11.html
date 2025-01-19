@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Sample Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .menu-icon {
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .menu:hover .dropdown-content {
+            display: block;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MJ AHMAD</h1>
+        <div class="menu">
+            <span class="menu-icon">&#9776; </span>
+            <div class="dropdown-content">
+                <a href="https://mjahmad.com">Home</a>
+                <a href="#">services</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>About us</h1>
+            <p>MJ Ahmad is a Tech Innovator, passionate about developing cutting-edge solutions that drive digital transformation. With expertise in Full-Stack Development, MJ Ahmad is committed to delivering high-quality, scalable, and efficient web applications tailored to meet the needs of diverse industries.</p>
+            <h3>Mission:</h3>
+            <p>To empower businesses and organizations with innovative technology solutions that enhance efficiency, user experience, and growth.</p>
+            <h3>Vision:</h3>
+            <p>To be a leader in the tech industry, known for pioneering solutions that bridge the gap between technology and human experience.</p>
+            <h3>Core Values:</h3>
+            <p>Innovation: Constantly pushing the boundaries of technology to create unique and effective solutions.</p>
+            <p>Quality: Commitment to excellence and delivering the highest standards in every project.</p>
+            <p>Integrity: Building trust through transparency, honesty, and ethical practices.</p>
+            <p>Collaboration: Working closely with clients to understand their needs and provide customized solutions.</p>
+            <p>Continuous Learning: Staying updated with the latest technologies and trends to ensure cutting-edge solutions.</p>
+            <p>At MJ Ahmad, we specialize in providing comprehensive services in three key areas:</p>
+            <h3>1. Education</h3>
+            <p>E-learning Platforms</p>
+            <p>Learning Management Systems (LMS)</p>
+            <p>Educational Apps</p>
+            <p>Virtual Classrooms</p>
+            <h3>2. E-commerce</h3>
+            <p>E-commerce Website Development</p>
+            <p>Payment Gateway Integration</p>
+            <p>Inventory Management Systems</p>
+            <p>Customer Relationship Management (CRM)</p>
+            <h3>3. Non-profit</h3>
+            <p>Charity Websites</p>
+            <p>Volunteer Management Systems</p>
+            <p>Donor Management Systems</p>
+            <p>Awareness Campaigns</p>
+            <p>Our goal is to help businesses and organizations thrive in the digital age by offering innovative and efficient solutions. We pride ourselves on our ability to deliver exceptional results and drive success for our clients.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">FAQ</a>
+        </p>
+    </footer>
+</body>
+</html>
